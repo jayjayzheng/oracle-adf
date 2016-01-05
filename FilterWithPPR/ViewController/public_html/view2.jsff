@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1" layout="scroll">
+    <af:resource type="javascript">
+        function changeURL() {
+            window.history.replaceState(null, null, '/test-string');
+        }
+    </af:resource>
+    <af:outputText value="This is the second view." id="ot1"/>
+    <af:commandButton text="Back" id="cb1" action="back"/>
+    <af:outputText value="#{requestScope.Page}" id="ot2"/>
+    <af:commandButton id="cb2" text="Click">
+      <af:clientListener type="click" method="changeURL"/>
+    </af:commandButton>
+  </af:panelGroupLayout>
+</jsp:root>

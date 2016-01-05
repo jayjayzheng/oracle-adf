@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1" layout="scroll">
+    <af:outputText value="This is the first view." id="ot1"/>
+    <af:commandButton text="Next" id="cb1" action="next" actionListener="#{managedBean.setParams}">
+      <af:setPropertyListener from="#{'test2'}" to="#{requestScope.Page}" type="action"/>
+    </af:commandButton>
+  </af:panelGroupLayout>
+</jsp:root>

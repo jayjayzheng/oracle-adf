@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2" id="__15">
+  <task-flow-definition id="test-task-flow">
+    <default-activity id="__1">testpageflow1</default-activity>
+    <view id="testpageflow1">
+      <page id="__14">/testpageflow1.jspx</page>
+      <redirect/>
+    </view>
+    <view id="testpageflow2">
+      <page id="__13">/testpageflow2.jspx</page>
+      <redirect/>
+    </view>
+    <task-flow-return id="taskFlowReturn1">
+      <outcome id="__16">
+        <name id="__18">taskFlowReturn1</name>
+      </outcome>
+    </task-flow-return>
+    <parent-action id="wcnav_parentAction">
+      <root-outcome id="__17">wcnav_outcome</root-outcome>
+    </parent-action>
+    <control-flow-rule id="__2">
+      <from-activity-id id="__3">testpageflow1</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome id="__6">next</from-outcome>
+        <to-activity-id id="__5">testpageflow2</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__7">
+      <from-activity-id id="__8">testpageflow2</from-activity-id>
+      <control-flow-case id="__9">
+        <from-outcome id="__11">back</from-outcome>
+        <to-activity-id id="__10">testpageflow1</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility id="__12">
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

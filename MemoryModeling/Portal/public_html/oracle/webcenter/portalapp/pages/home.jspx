@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:pe="http://xmlns.oracle.com/adf/pageeditor"
+          xmlns:cust="http://xmlns.oracle.com/adf/faces/customizable">
+  <f:loadBundle basename="oracle.webcenter.portalframework.sitestructure.resource.PortalAppPageResource"
+                var="portalResource"/>
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1" title="#{portalResource['home_title']}">
+      <af:form id="f1">    
+	<af:pageTemplate value="#{bindings.pageTemplateBinding.templateModel}" id="pt1">
+          <f:facet name="content">
+            <af:panelGroupLayout id="pgl1" layout="scroll">
+              <af:outputText value="#{navigationContext.defaultNavigationModel.node['home'].goLinkPrettyUrl}" id="ot1"/>
+            </af:panelGroupLayout>
+          </f:facet>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>

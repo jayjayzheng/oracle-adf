@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="y">238.63281</property>
+      <property
+         name="x">95.89844</property>
+   </OverallProperties>
+   <Page
+      id="Page2">
+      <property
+         name="wildcard">true</property>
+      <property
+         name="y">84.0</property>
+      <property
+         name="x">95.89844</property>
+      <property
+         name="jspName">*</property>
+   </Page>
+   <Page
+      id="Page3">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="y">83.234375</property>
+      <property
+         name="x">371.66504</property>
+      <property
+         name="jspName">/pages_home</property>
+   </Page>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase4"
+      from="Page2"
+      to="Page3">
+      <property
+         name="fromOutcome">login_success</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">R50,131.89844,84.43359,330.66504,83.16797,L50</property>
+   </NavigationCase>
+   <NavigationCase
+      islink="true"
+      id="NavigationCase5"
+      from="Page2"
+      to="Page6">
+      <property
+         name="fromOutcome">logout_success</property>
+      <property
+         name="description">Navigation Case</property>
+      <property
+         name="sdm:polyPoints">B50,95.89844,126.93359,20.0,87.0,B50</property>
+   </NavigationCase>
+   <Page
+      id="Page6">
+      <property
+         name="wildcard">false</property>
+      <property
+         name="jspName">/logout.html</property>
+   </Page>
+</SDM>

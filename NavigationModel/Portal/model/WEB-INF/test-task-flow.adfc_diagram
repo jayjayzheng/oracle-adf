@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">testpageflow1</property>
+      <property
+         name="page">/testpageflow1.jspx</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>testpageflow1&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">201.29883</property>
+      <property
+         name="x">286.0</property>
+   </View>
+   <View
+      id="View3">
+      <property
+         name="activityId">testpageflow2</property>
+      <property
+         name="page">/testpageflow2.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>testpageflow2&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">200.14355</property>
+      <property
+         name="x">575.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="View3">
+      <property
+         name="fromOutcome">next</property>
+      <property
+         name="sdm:polyPoints">R46,327.0,197.44824,533.98047,196.29297,L46</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="View3"
+      to="View2">
+      <property
+         name="fromOutcome">back</property>
+      <property
+         name="sdm:polyPoints">L54,534.0,203.29297,327.01953,204.44824,R54</property>
+   </ControlFlowCase>
+   <TaskFlowReturn
+      id="TaskFlowReturn6">
+      <property
+         name="activityId">taskFlowReturn1</property>
+      <property
+         name="finish">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>taskFlowReturn1&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Return&lt;/p>&lt;p>Outcome:  taskFlowReturn1&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">350.94824</property>
+      <property
+         name="x">362.0</property>
+   </TaskFlowReturn>
+   <ParentAction
+      id="ParentAction7">
+      <property
+         name="activityId">wcnav_parentAction</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>wcnav_parentAction&lt;/b>&lt;/p>&lt;p>Activity Type:  Parent Action&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">64.59766</property>
+      <property
+         name="x">423.0</property>
+   </ParentAction>
+</SDM>

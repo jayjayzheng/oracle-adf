@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__3">
+    <managed-bean-name id="__1">LogoutBean</managed-bean-name>
+    <managed-bean-class id="__2">com.jayjay.portal.beans.Logout</managed-bean-class>
+    <managed-bean-scope id="__4">request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name id="__8">NavigationBean</managed-bean-name>
+    <managed-bean-class id="__6">com.jayjay.portal.beans.NavigationUtils</managed-bean-class>
+    <managed-bean-scope id="__5">request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

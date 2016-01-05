@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="page-based-taskflow">
+    <default-activity id="__1">taskflow-page</default-activity>
+    <task-flow-reentry id="__3">
+      <reentry-allowed/>
+    </task-flow-reentry>
+    <view id="taskflow-page">
+      <page>/oracle/webcenter/portalapp/pages/taskflow-page.jspx</page>
+      <redirect/>
+    </view>
+    <visibility id="__2">
+      <url-invoke-allowed/>
+      <remote-invocable/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

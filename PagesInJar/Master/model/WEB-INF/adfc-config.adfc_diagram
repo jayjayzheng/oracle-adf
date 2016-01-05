@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1"/>
+   <View
+      id="View2">
+      <property
+         name="activityId">main</property>
+      <property
+         name="page">/main.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>main&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">183.86719</property>
+      <property
+         name="x">179.0</property>
+   </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="activityId">pages-based-taskflow</property>
+      <property
+         name="documentReference">/WEB-INF/pages-based-taskflow.xml</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>pages-based-taskflow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="taskFlowId">pages-based-taskflow</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">186.23438</property>
+      <property
+         name="x">425.81543</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">flow</property>
+      <property
+         name="sdm:polyPoints">R50,220.0,183.80078,384.81543,186.16797,L50</property>
+   </ControlFlowCase>
+</SDM>

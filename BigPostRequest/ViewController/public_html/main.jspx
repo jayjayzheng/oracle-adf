@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <f:view>
+    <af:document id="d1" title="Main">
+      <af:form id="f1">
+        <af:pageTemplate viewId="/oracle/templates/threeColumnTemplate.jspx" id="pt1">
+          <f:facet name="center">
+            <af:panelGroupLayout id="pgl1" layout="scroll">
+              <af:iterator id="i1" value="#{viewScope.ManagedBean.iterateList}" var="row" varStatus="vs" rows="20">
+                <af:selectOneChoice label="Questions" id="soc1" autoSubmit="true"
+                                    valueChangeListener="#{viewScope.ManagedBean.onSelect}" immediate="true">
+                  <af:selectItem label="Coffee" value="Coffee" id="si3"/>
+                  <af:selectItem label="Tea" value="Tea" id="si2"/>
+                  <af:selectItem label="Cake" value="Cake" id="si1"/>
+                </af:selectOneChoice>
+              </af:iterator>
+              <af:spacer width="10" height="50" id="s1"/>
+              <af:outputText value="Your selection is #{viewScope.ManagedBean.selection}" id="ot1"
+                             partialTriggers="i1:soc1"/>
+            </af:panelGroupLayout>
+          </f:facet>
+          <f:facet name="header"/>
+          <f:facet name="end"/>
+          <f:facet name="start"/>
+          <f:facet name="branding"/>
+          <f:facet name="copyright"/>
+          <f:facet name="status"/>
+        </af:pageTemplate>
+      </af:form>
+    </af:document>
+  </f:view>
+</jsp:root>
